@@ -5,29 +5,20 @@ int main() {
 	long n;
 	cin >> n;
 
-	if (n <= 3)
-	{
-		cout << "NO SOLUTION";
+	if (n == 1) {
+		cout << "1\n";
+		return 0;
+	}
+	if (n == 2 || n == 3) {
+		cout << "NO SOLUTION\n";
 		return 0;
 	}
 
-	long res[n];
-	int pos = 0;
-
-	for (long i = 1; i <= n; i+=2)
-	{
-		res[pos++] = i;
+	for (int i = 2; i <= n; i += 2) {
+		cout << i << ' ';
 	}
-	for (long i = 2; i <= n; i+=2)
-	{
-		res[pos++] = i;
+	for (int i = 1; i <= n; i += 2) {
+		cout << i << ' ';
 	}
-
-	while (n--)
-	{
-		cout << res[n] << " ";
-	}
-	
-	cout << endl;
 	return 0;
 }
